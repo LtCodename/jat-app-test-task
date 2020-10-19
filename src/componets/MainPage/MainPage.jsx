@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import './MainPage.css';
+import RateReducer from "../../redux/RateReducer";
 
 const MainPage = () => {
-    const [rate, setRate] = useState("...");
     const [convertFrom, setConvertFrom] = useState("USD");
     const [convertTo, setConvertTo] = useState("AUD");
     const [value, setValue] = useState(1);
     const [allCurrencies, setAllCurrencies] = useState([]);
+
+    const dispatch = useDispatch();
+    const rate = useSelector(state => state.rate);
 
     useEffect(() => {
         getAllCurrencies();
@@ -15,6 +19,7 @@ const MainPage = () => {
 
     useEffect(() => {
         convert();
+        // eslint-disable-next-line
     },[convertTo, convertFrom, value]);
 
     const getAllCurrencies = () => {
@@ -38,10 +43,11 @@ const MainPage = () => {
     }
 
     const convert = () => {
-        setRate("...");
+        dispatch({type: RateReducer.actions.RATE_SET, rate: "..."});
+
         axios.get(`https://api.openrates.io/latest?base=${convertFrom}&symbols=${convertTo}`).then(response => {
             const result = value * (response.data.rates[convertTo]);
-            setRate(result.toFixed(2));
+            dispatch({type: RateReducer.actions.RATE_SET, rate: result.toFixed(2)});
         }).catch(err => {
             console.log("error", err.message);
         });

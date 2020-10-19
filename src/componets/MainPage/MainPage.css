@@ -39,7 +39,7 @@
 }
 
 .converter-result {
-    width: 100px;
+    min-width: 100px;
     height: 50px;
     background: #fe4c27;
     font-size: 25px;

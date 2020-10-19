@@ -6,7 +6,7 @@ import RateReducer from "../../redux/RateReducer";
 
 const MainPage = () => {
     const [convertFrom, setConvertFrom] = useState("USD");
-    const [convertTo, setConvertTo] = useState("AUD");
+    const [convertTo, setConvertTo] = useState("EUR");
     const [value, setValue] = useState(1);
     const [allCurrencies, setAllCurrencies] = useState([]);
 
@@ -24,10 +24,11 @@ const MainPage = () => {
 
     const getAllCurrencies = () => {
         axios.get("https://api.openrates.io/latest").then(response => {
-            let allCurrencyValues = []
+            let allCurrencyValues = ["EUR"];
             for (let key in response.data.rates) {
                 allCurrencyValues.push(key);
             }
+
             setAllCurrencies(allCurrencyValues.sort());
         }).catch(err => {
             console.log("error", err.message);

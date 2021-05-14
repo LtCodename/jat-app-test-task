@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/jat-app-test-task/static/css/main.f4a15efa.chunk.css",
+    "main.js": "/jat-app-test-task/static/js/main.d6ca9e76.chunk.js",
+    "main.js.map": "/jat-app-test-task/static/js/main.d6ca9e76.chunk.js.map",
+    "runtime-main.js": "/jat-app-test-task/static/js/runtime-main.da5a45eb.js",
+    "runtime-main.js.map": "/jat-app-test-task/static/js/runtime-main.da5a45eb.js.map",
+    "static/js/2.95d53920.chunk.js": "/jat-app-test-task/static/js/2.95d53920.chunk.js",
+    "static/js/2.95d53920.chunk.js.map": "/jat-app-test-task/static/js/2.95d53920.chunk.js.map",
+    "index.html": "/jat-app-test-task/index.html",
+    "precache-manifest.c9bb8a4c2dca3f5448845ac0af6516f6.js": "/jat-app-test-task/precache-manifest.c9bb8a4c2dca3f5448845ac0af6516f6.js",
+    "service-worker.js": "/jat-app-test-task/service-worker.js",
+    "static/css/main.f4a15efa.chunk.css.map": "/jat-app-test-task/static/css/main.f4a15efa.chunk.css.map",
+    "static/js/2.95d53920.chunk.js.LICENSE.txt": "/jat-app-test-task/static/js/2.95d53920.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da5a45eb.js",
+    "static/js/2.95d53920.chunk.js",
+    "static/css/main.f4a15efa.chunk.css",
+    "static/js/main.d6ca9e76.chunk.js"
+  ]
+}

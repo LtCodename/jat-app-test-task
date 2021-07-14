@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 import rateReducer from "./RateReducer";
 
 const RootReducer = combineReducers({

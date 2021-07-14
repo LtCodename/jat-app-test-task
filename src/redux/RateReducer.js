@@ -1,17 +1,17 @@
 const initState = "...";
 
-const RATE_SET = 'RATE_SET';
+const RATE_SET = "RATE_SET";
 
 const RateReducer = (state = initState, action) => {
-    let copy;
+  let copy;
 
-    switch (action.type) {
-        case RATE_SET:
-            copy = action.rate;
-            return copy;
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case RATE_SET:
+      copy = action.rate;
+      return copy;
+    default:
+      return state;
+  }
 };
 
-export default {reducer: RateReducer, actions: {RATE_SET}};
+export default { reducer: RateReducer, actions: { RATE_SET } };
